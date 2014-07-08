@@ -10,7 +10,7 @@ import org.codehaus.groovy.tools.shell.Groovysh;
 import org.codehaus.groovy.tools.shell.IO;
 import org.codehaus.groovy.tools.shell.InteractiveShellRunner;
 
-import com.sparsity.dex.groovy.MetaDex;
+import com.sparsity.sparksee.groovy.MetaSparksee;
 
 /**
  * 
@@ -30,8 +30,8 @@ public class Shell {
         ResultHandlerClosure rhc = new ResultHandlerClosure(groovy, io);
         rhc.showOutput(false);
         groovy.setResultHook(rhc);
-        groovy.execute("import com.sparsity.dex.gdb.Dex;");
-        groovy.execute("import com.sparsity.dex.*;");
+        groovy.execute("import com.sparsity.sparksee.gdb.Sparksee;");
+        groovy.execute("import com.sparsity.sparksee.*;");
         groovy.setHistory(new History());
         rhc.showOutput(true);
 
@@ -45,11 +45,12 @@ public class Shell {
             // continue with no history file :-(
         }
 
-        MetaDex.ini();
+        MetaSparksee.ini();
 
         try {
             isr.run();
         } catch (ExitNotification e) {
+        	System.out.println(e.getMessage());
         }
     }
 

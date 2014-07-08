@@ -1,4 +1,4 @@
-package com.sparsity.dex.groovy;
+package com.sparsity.sparksee.groovy;
 
 class Node extends Object {
     public Node(Graph sg, long oid) {

@@ -1,11 +1,11 @@
-package com.sparsity.dex.groovy;
+package com.sparsity.sparksee.groovy;
 
 class Objects<T extends Object> implements Iterable<T> {
 
     // Read-only properties
     
     final Graph sg
-    final com.sparsity.dex.gdb.Objects objs
+    final com.sparsity.sparksee.gdb.Objects objs
     final Class<T> clazz
     
     public Objects(sg, objs, clazz) {
@@ -39,7 +39,7 @@ class Objects<T extends Object> implements Iterable<T> {
     }
     
     Iterator<T> iterator() {
-        com.sparsity.dex.gdb.ObjectsIterator itt = objs.iterator()
+        com.sparsity.sparksee.gdb.ObjectsIterator itt = objs.iterator()
         int i = 0
         int max = objs.size()
         return [

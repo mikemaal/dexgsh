@@ -4,14 +4,32 @@
 	<groupId>net.sgomezvillamor</groupId>
 	<artifactId>dexgsh</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<repositories>
+		<repository>
+			<id>private-internal-repository</id>
+			<name>private-internal-repository</name>
+			<url>http://fedra.pc.ac.upc.edu/archiva/repository/private-internal-repository/</url>
+		</repository>
+		<repository>
+			<id>snapshot-repository</id>
+			<name>snapshot-repository</name>
+			<url>http://fedra.pc.ac.upc.edu/archiva/repository/snapshot-repository/</url>
+			<snapshots>
+				<updatePolicy>always</updatePolicy>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>third-party</id>
+			<name>third-party</name>
+			<url>http://fedra.pc.ac.upc.edu/archiva/repository/third-party/</url>
+		</repository>
+	</repositories>
 	<dependencies>
-
 		<dependency>
 			<groupId>com.sparsity</groupId>
-			<artifactId>dexjava</artifactId>
-			<version>4.5.1</version>
-			<type>jar</type>
-			<scope>compile</scope>
+			<artifactId>sparkseejava</artifactId>
+			<version>5.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>jline</groupId>
@@ -40,25 +58,25 @@
 	</dependencies>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.gmaven</groupId>
-				<artifactId>gmaven-plugin</artifactId>
-				<version>1.4</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>generateStubs</goal>
-							<goal>compile</goal>
-							<goal>generateTestStubs</goal>
-							<goal>testCompile</goal>
-						</goals>
-						<configuration>
-							<providerSelection>1.7</providerSelection>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
+			<plugins>
+				<plugin>
+					<groupId>org.codehaus.gmaven</groupId>
+					<artifactId>gmaven-plugin</artifactId>
+					<version>1.4</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>generateStubs</goal>
+								<goal>compile</goal>
+								<goal>generateTestStubs</goal>
+								<goal>testCompile</goal>
+							</goals>
+							<configuration>
+								<providerSelection>1.7</providerSelection>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
 	</build>
 </project>

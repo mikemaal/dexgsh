@@ -1,4 +1,4 @@
-package com.sparsity.dex.groovy;
+package com.sparsity.sparksee.groovy;
 
 class Edge extends Object {
 
@@ -10,7 +10,7 @@ class Edge extends Object {
     
     public Edge(Graph sg, long oid) {
         super(sg, oid)
-        com.sparsity.dex.gdb.EdgeData edata = sg.graph.getEdgeData(oid)
+        com.sparsity.sparksee.gdb.EdgeData edata = sg.graph.getEdgeData(oid)
         tail = edata.tail
         head = edata.head
     }
