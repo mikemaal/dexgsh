@@ -1,4 +1,4 @@
-package org.sgomezvillamor.dexgsh;
+package com.sparsity.sparksee.gsh;
 
 import java.io.File;
 import java.io.IOException;

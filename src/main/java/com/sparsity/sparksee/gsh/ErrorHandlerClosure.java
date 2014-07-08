@@ -1,4 +1,4 @@
-package org.sgomezvillamor.dexgsh;
+package com.sparsity.sparksee.gsh;
 
 import groovy.lang.Closure;
 
